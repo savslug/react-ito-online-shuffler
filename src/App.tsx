@@ -31,7 +31,7 @@ class ParamForm extends React.Component {
   constructor(props: any) {
     super(props);
     this.state = {
-      seedString: Math.floor(new Date().getTime() / 1000 / 60) % 100000,
+      seedString: String(Math.floor(new Date().getTime() / 1000 / 60) % 100000),
       playerId: "",
       handSize: "",
       boardSize: "",
