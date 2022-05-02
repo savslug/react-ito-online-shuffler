@@ -2,7 +2,7 @@ import React from "react";
 import shuffleSeed from "shuffle-seed";
 
 const cardPool = Array.from({ length: 100 }, (_, i) =>
-  String(i + 1).padStart(3, "0")
+  String(i + 1).padStart(2, "0")
 );
 export class ItoOnlineCardShuffler extends React.Component {
   constructor(props: any) {
