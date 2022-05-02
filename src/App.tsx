@@ -80,7 +80,9 @@ class ParamForm extends React.Component {
     const shuffled = shuffleSeed.shuffle(a, this.state.seedString);
     const start = 10 * Number(this.state.playerId);
     const end = start + Number(this.state.handSize);
-    const slice = shuffled.slice(start, end).sort();
+    const slice = shuffled
+      .slice(start, end)
+      .sort((one, two) => (Number(one) > Number(two) ? 1 : -1));
     //console.log(a);
     //console.log(shuffled);
     //console.log(slice);
